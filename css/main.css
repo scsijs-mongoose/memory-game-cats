@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    background: #f9b64b;
+    font-family: Arial;
+}
+
+h1 {
+    color: #f4efec;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(198,28,39,0.8), 0 0 0 black;
+    text-transform: uppercase;
+}
+p {font-size: 50px;color: #fff;width: 660px;}
+
+#game {
+    border-radius: 10px;
+    border: 1px solid #666;
+    background: #232;
+    width: 700px;
+    height: 530px;
+    margin: 0 auto;
+    display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+#cards {
+    position: relative;
+    width: 660px;
+    height: 490px;
+}
+.card {
+    -webkit-perspective:600;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition:all .3s;
+    transition:all .3s;
+}
+.face {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition:all .3s;
+    -webkit-backface-visibility:hidden;
+}
+.front {
+    background: #999 url(../img/back.png) 0 0;
+    z-index: 10;
+}
+.back {
+    background: #efefef url(../img/cats.png);
+    -webkit-transform:rotate3d(0,1,0,-180deg);
+    z-index: 8;
+}
+.card-flipped .front {
+    -webkit-transform:rotate3d(0,1,0,180deg);
+    z-index: 8;
+}
+.card-flipped .back {
+    -webkit-transform:rotate3d(0,1,0,0deg);
+    z-index: 10;
+}
+
+.card-removed {
+    opacity: 0;
+    cursor: default;
+}
+.card01 {background-position: -150px 0;}
+.card02 {background-position: -300px 0;}
+.card03 {background-position: -450px 0;}
+.card04 {background-position: -600px 0;}
+.card05 {background-position: -750px 0}
+.card06 {background-position: -900px 0;}
+.card07 {background-position: -1050px 0;}
+.card08 {background-position: -1200px 0;}
